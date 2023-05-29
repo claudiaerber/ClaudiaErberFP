@@ -59,7 +59,6 @@ vioplot(DML ~ Fmaturity, data = squid, xlab = "maturity stage", ylab = "DML", co
 
 
 # **Session Summary 5(210523)**
-- no exercise was done
 - summary of the course
 - more details about the Final Paper
 
@@ -96,12 +95,25 @@ pairs(dolphin[, c(1, 2, 3, 4)])
 
 boxplot(whistle ~ behaviour, data = dolphin, xlab = "behaviour", ylab = "whistle")
 
+#Create a boxplot to visualise the differences in whistle tx at each Behaviour during the boat presence
 boxplot(boat ~ behaviour, data = dolphin, xlab = "behaviour", ylab = "boat")
 
-# violin plot
-library(vioplot)
+##IMPORTANT CONCLUSIONS
+#it is necessary to build the data base with the information needed to R create the graphics
+#I still figuring out the tests I will use 
+#I understand better the R language, however need to practice more 
+#Probably when I have my own data I will be able to create the scripts that will be used during my research
 
-vioplot(boat ~ whistle, data = dolphin, xlab = "whitle", ylab = "boat", col = "lightblue")
+##NEXT:
+#use the program
+#create my database
+#use the script to register the tests I want to use
+#use the "help" to understand better the R language
+#use the time to feel confident with the program
+#pay attention in details (writing and commands)
+#exercising R funtions
+#follow up R BOOK tips
+
 
 
 
