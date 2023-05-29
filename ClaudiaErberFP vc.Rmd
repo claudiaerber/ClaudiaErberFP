@@ -1,118 +1,112 @@
 ---
-title: "CE FP"
+title: "Claudia Erber Final Paper"
 author: "Claudia Erber"
 date: "2023-05-29"
 output: html_document
 ---
 
-## **Statistical Analysis of Behavioral Data**
+## **Statistical Analysis of Behavioral Data**  
 
 Learning how to use RStudio, RMarkdown and GitHub
 - Dead line 02/06/2023
-
 - Intensive course online from 17 to 21 May
 
-#The present RMarkdown is the second time that I am practicing each Course Session.
 
-#After the professor review this is the Final Paper document 
+## **Course Sessions Summaries:**  
 
-##Course Sessions Summaries:
+#**Session Summary 1 Intensive Course (170523)**  
 
-# **Session Summary 1 Intensive Course (170523)**
+- Exercise 1 very difficult, watch the videos many times before hands on, and lost time  
+- Exercise 2 it feels little bit easier, but had problems to find some symbols in my pc  
+- Exercise 3 I got to solve the symbols problem and I used the link with the answers to get more familiar with the R language  
+- Exercise 4 R Markdown still a challenge at moment but I like it!  
 
-- Exercise 1 very difficult, watch the videos many times before hands on, and lost time
-- Exercise 2 it feels little bit easier, but had problems to find some symbols in my pc
-- Exercise 3 I got to solve the symbols problem and I used the link with the answers to get more familiar with the R language
-- Exercise 4 R Markdown still a challenge at moment but I like it!
-#**Session Summary 1 Second Course:**
+#**Session Summary 1 Second Course:**  
 - All the exercises were done following the Exercise Solutions codes and explanation. No issues during the process. 
 
 
+#**Session Summary 2(180523)**  
+- problem to get the doc.rmd in Git tab   
+- created many repositories in Github  
 
-#**Session Summary 2(180523)**
--problem to get the doc.rmd in Git tab   
--created many repositories in Github  
-#**Session Summary 2 Second Course:**
--Git already installed
--Profile in Git created
--New Repository created FinalPaperCE 
--no issues to pull, push and commit files
-
-#**Session Summary 3(190523)**
-boxplot(DML ~ Fmaturity, data = squid, xlab = "maturity stage", ylab = "DML")
-#ERROR 
-library(vioplot)
-vioplot(DML ~ Fmaturity, data = squid, xlab = "maturity stage", ylab = "DML", col = "lightblue")
-#Peter´s solution below
-library(vioplot)
-vioplot(DML ~ Fmaturity, data = squid, xlab = "maturity stage", ylab = "DML", col = "lightblue")
-#**Session Summary 3 Second Course:**
--Error ‘>’ not meaningful for factors
-
-#**Session Summary 4(200523)**
--Error object 'diameter' not found
--Error in resid(m1) : object 'm1' not found
--Error unexpected ',' in "hist(resid(m1)),"
-# **Session Summary 4 Second Course:**
--same errors as the first time I tried to do the exercise 
-- errors to find objects and to plot
+#**Session Summary 2 Second Course:**  
+- Git already installed  
+- Profile in Git created  
+- New Repository created FinalPaperCE   
+- no issues to pull, push and commit files  
 
 
-# **Session Summary 5(210523)**
-- summary of the course
-- more details about the Final Paper
+#**Session Summary 3(190523)**  
+- boxplot(DML ~ Fmaturity, data = squid, xlab = "maturity stage", ylab = "DML")  
+- library(vioplot)  
+vioplot(DML ~ Fmaturity, data = squid, xlab = "maturity stage", ylab = "DML", col = "lightblue")  
+#Peter´s solution    
+
+#**Session Summary 3 Second Course:**  
+- Error ‘>’ not meaningful for factors  
 
 
-## How to make the learning sessions useful to my research?
+#**Session Summary 4(200523)**  
+- Error object 'diameter' not found  
+- Error in resid(m1) : object 'm1' not found  
+- Error unexpected ',' in "hist(resid(m1)),"  
 
-#Number and Type of whistles emitted per behaviour
-#Behaviors categories: Foraging, Traveling, Fishing and socializing
-#Metrics: Behaviour,	recording time,	whistle tx, whistle tx with	boat presence
+#**Session Summary 4 Second Course:**  
+- same errors as the first time I tried to do the exercise  
+- errors to find objects and to plot  
 
-##import the ‘dolphins.txt’ file into R
-dolphin <- read.table('data/dolphin.txt', header = TRUE, stringsAsFactors = TRUE)
-
-
-#use the head() function to display the first 4 rows of my dataframe
-head(dolphin)
-
-#use the str() function to display the structure of the dataset and a neat summary of your variables
-str(dolphin)
-
-#get useful summary of your dataframe by using the summary() function
-summary(whistles)
-
-#mean ascending whistles
-mean(dolphin$time)
+#**Session Summary 5(210523)**  
+- summary of the course  
+- more details about the Final Paper    
 
 
-#Create a pairs plot for all variables
-# vanilla pairs plot
-pairs(dolphin[, c(1, 2, 3, 4)])
+## **How to make the learning sessions useful to my research?**  
 
+- it is necessary to build the data base with the information needed to R create the graphics  
+- I still figuring out the tests I will use   
+- I understand better the R language, however need to practice more   
+- Probably when I have my own data I will be able to create the scripts that will be used during my research  
+
+# **NEXT:**  
+- use the program  
+- create my database    
+- use the script to register the tests I want to use   
+- use the "help" to understand better the R language  
+- use the time to feel confident with the program  
+- pay attention in details (writing and commands)  
+- follow up R BOOK tips  
+
+
+#*USING R 290523*  
+#Number and Type of whistles emitted per behaviour  
+#Behaviors categories: Foraging, Traveling, Fishing and socializing  
+#Metrics: Behaviour,	recording time,	whistle tx, whistle tx with	boat presence  
+##import the ‘dolphins.txt’ file into R  
+dolphin <- read.table('data/dolphin.txt', header = TRUE, stringsAsFactors = TRUE)  
+
+#use the head() function to display the first 4 rows of my dataframe  
+head(dolphin)  
+
+#use the str() function to display the structure of the dataset and a neat summary of your variables  
+str(dolphin)  
+
+#get useful summary of your dataframe by using the summary() function  
+summary(whistles)  
+
+#mean ascending whistles  
+mean(dolphin$time)  
+
+#Create a pairs plot for all variables  
+# vanilla pairs plot  
+pairs(dolphin[, c(1, 2, 3, 4)])  
 
 #Create a boxplot to visualise the differences in whistle tx at each Behaviour
-
 boxplot(whistle ~ behaviour, data = dolphin, xlab = "behaviour", ylab = "whistle")
 
 #Create a boxplot to visualise the differences in whistle tx at each Behaviour during the boat presence
 boxplot(boat ~ behaviour, data = dolphin, xlab = "behaviour", ylab = "boat")
 
-##IMPORTANT CONCLUSIONS
-#it is necessary to build the data base with the information needed to R create the graphics
-#I still figuring out the tests I will use 
-#I understand better the R language, however need to practice more 
-#Probably when I have my own data I will be able to create the scripts that will be used during my research
 
-##NEXT:
-#use the program
-#create my database
-#use the script to register the tests I want to use
-#use the "help" to understand better the R language
-#use the time to feel confident with the program
-#pay attention in details (writing and commands)
-#exercising R funtions
-#follow up R BOOK tips
 
 
 
