@@ -7,9 +7,9 @@ output: html_document
 
 ## **Statistical Analysis of Behavioral Data**  
 
-Learning how to use RStudio, RMarkdown and GitHub
-- Dead line 02/06/2023
-- Intensive course online from 17 to 21 May
+Learning how to use RStudio, RMarkdown and GitHub  
+- Dead line 02/06/2023    
+- Intensive course online from 17 to 21 May  
 
 
 ## **Course Sessions Summaries:**  
@@ -78,6 +78,7 @@ vioplot(DML ~ Fmaturity, data = squid, xlab = "maturity stage", ylab = "DML", co
 
 
 #*USING R 290523*  
+#*Dolphin database created to exercise few R functions*  
 #Number and Type of whistles emitted per behaviour  
 #Behaviors categories: Foraging, Traveling, Fishing and socializing  
 #Metrics: Behaviour,	recording time,	whistle tx, whistle tx with	boat presence  
